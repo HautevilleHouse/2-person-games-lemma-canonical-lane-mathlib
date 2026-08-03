@@ -1,0 +1,21 @@
+# CanonicalLane Lean 4 CI — applied to all HautevilleHouse repos.
+name: Lean CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    uses: leanprover/lean-action/.github/workflows/ci.yml@v1
+    with:
+      build: "true"
+      test: "true"
+      leanchecker: "true"
+      nanoda: "true"
+      nanoda-allow-sorry: "false"
+      use-mathlib-cache: "auto"
+      use-github-cache: "true"

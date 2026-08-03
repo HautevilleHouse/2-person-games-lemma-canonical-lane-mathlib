@@ -1,0 +1,7 @@
+# Lean
+.lake/
+lakefile.lean
+lake-manifest.json
+build/
+# macOS
+.DS_Store
